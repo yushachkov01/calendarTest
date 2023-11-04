@@ -1,0 +1,17 @@
+<full-calendar [options]="calendarOptions"></full-calendar>
+
+<ng-template #template>
+  <div class="modal-header bg-primary text-white">
+    <h4 class="modal-title pull-left">Редактировать запись</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <input [(ngModel)]="title">
+    <p>{{ start | date}}</p>
+  </div>
+  <button class="btn" (click)="editWindow()">Сохранить</button>
+    <button class="btn" (click)="removePost()">Удалить</button>
+</ng-template>
+
